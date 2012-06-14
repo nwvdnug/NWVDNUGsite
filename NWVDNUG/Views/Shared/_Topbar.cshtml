@@ -1,0 +1,45 @@
+﻿﻿<!-- Topbar
+    ================================================== -->
+<div class="topbar" >
+    <div class="topbar-inner">
+        <div class="container">
+            <a class="brand" href="/">NWVDNUG.org</a>
+            <ul class="nav">
+                <li @if (ViewBag.NavActive == "Home")
+                    {<text>class="active"</text>}>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="dropdown" data-dropdown="dropdown">
+                    <a class="dropdown-toggle" href="#">Meetings</a>
+                    <ul class="dropdown-menu">
+                        <li @if (ViewBag.NavActive == "MeetingNext")
+                            {<text>class="active"</text>}>@Html.ActionLink("Next", "Next", "Meetings")</li>
+                        <li @if (ViewBag.NavActive == "MeetingUpcoming")
+                            {<text>class="active"</text>}>@Html.ActionLink("Upcoming", "Index", "Meetings")</li>
+                    </ul>
+                </li>
+                <li @if (ViewBag.NavActive == "Sponsors")
+                    {<text>class="active"</text>}>@Html.ActionLink("Sponsors", "Sponsors", "Home")</li>
+                <li @if (ViewBag.NavActive == "Network")
+                    {<text>class="active"</text>}>@Html.ActionLink("Network", "Network", "Home")</li>
+                <li @if (ViewBag.NavActive == "About")
+                    {<text>class="active"</text>}>@Html.ActionLink("About", "About", "Home")</li>
+            </ul>
+            @*<img src="../../Content/images/NWVDNUG_logo.jpg" />*@
+            @*
+            <ul class="nav secondary-nav">
+                ﻿@if(Request.IsAuthenticated) {
+                    <li class="dropdown" data-dropdown="dropdown">
+                        <a class="dropdown-toggle" href="#">@User.Identity.Name</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Reset Password", "ChangePassword", "Account")</li>
+                            <li>@Html.ActionLink("Log Off", "LogOff", "Account")</li>
+                        </ul>
+                    </li>
+                }
+                else {
+                <li @if (ViewBag.NavActive == "Log On") {<text>class="active"</text>}>@Html.ActionLink("Log On", "LogOn", "Account")</li>
+                }
+            </ul>
+*@
+        </div>
+    </div>
+</div>

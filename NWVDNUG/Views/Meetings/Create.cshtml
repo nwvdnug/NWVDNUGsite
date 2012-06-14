@@ -1,0 +1,20 @@
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend></legend>
+
+		@Html.Partial("_CreateOrEdit", Model)
+
+        <div class="actions">
+            <input type="submit" class="btn primary" value="Create" />
+			@Html.ActionLink("Back to List", "Index", new { @class = "btn large"})
+        </div>
+    </fieldset>
+}
+

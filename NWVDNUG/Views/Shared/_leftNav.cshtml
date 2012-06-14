@@ -1,0 +1,15 @@
+﻿<h3>Site Navigation</h3>
+<ul class="pills">
+    <li @if (ViewBag.NavActive == "Home")
+        {<text>class="active"</text>}>@Html.ActionLink("Home Page", "Index", "Home")</li>
+    <li @if (ViewBag.NavActive == "MeetingNext")
+        {<text>class="active"</text>}>@Html.ActionLink("Next Meeting", "Next", "Meetings")</li>
+    <li @if (ViewBag.NavActive == "MeetingUpcoming")
+        {<text>class="active"</text>}>@Html.ActionLink("Upcoming Meetings", "Index", "Meetings")</li>
+    <li @if (ViewBag.NavActive == "Sponsors")
+        {<text>class="active"</text>}>@Html.ActionLink("Sponsors", "Sponsors", "Home")</li>
+    <li @if (ViewBag.NavActive == "Network")
+        {<text>class="active"</text>}>@Html.ActionLink("Network", "Network", "Home")</li>
+    <li @if (ViewBag.NavActive == "About")
+        {<text>class="active"</text>}>@Html.ActionLink("About NWVDNUG", "About", "Home")</li>
+</ul>

@@ -42,6 +42,13 @@ namespace NWVDNUG.Services
         }
         #endregion
 
+
+        public Meeting[] GetActiveMeetings()
+        {
+            return GetAllQuery(true)
+                .ToArray();
+        }
+
         public Meeting GetById(int id)
         {
             return GetAllQuery(true).SingleOrDefault(x => x.Id == id);
@@ -81,7 +88,8 @@ namespace NWVDNUG.Services
         private IQueryable<Meeting> GetFutureQuery()
         {
             return GetAllQuery(false)
-                .Where(m => m.StartDateTime >= DateTime.Now);
+                .Where(m => m.StartDateTime >= DateTime.Now)
+                .OrderBy(m => m.StartDateTime);
         }
 
         private IQueryable<Meeting> GetPastQuery()

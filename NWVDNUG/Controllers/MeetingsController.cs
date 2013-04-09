@@ -98,7 +98,13 @@ namespace NWVDNUG.Controllers
 
         public ViewResult Next()
         {
-            Meeting meeting = _meetingsService.GetNextMeeting();
+            var meeting = _meetingsService.GetNextMeeting() ?? new Meeting
+            {
+                IsArchived = false,
+                Title = "No Meeting Info Found",
+                SpeakerName = "",
+                Location = "Foothills Recreation Center, 5600 W Union Hills Ave, Glendale, AZ, 85308",
+            };
 
             ViewBag.NavActive = "MeetingNext";
             return View("Details", meeting);

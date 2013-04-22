@@ -1,61 +1,68 @@
 @model NWVDNUG.Entities.Meeting
 @{
-    ViewBag.Title = "Meeting Details";
+	ViewBag.Title = "Meeting Details";
 }
 
 <h2>Meeting Details</h2>
 
 <form>
-    <fieldset>
-        <legend>Details for @Model.Title on @Model.StartDateTime.ToShortDateString()</legend>
-        <div class="clearfix">
-            <label>Title</label>
-            <div class="input">
-                <input id="TitleInput" class="span6 uneditable-input" readonly="readonly" type="text" value="@Model.Title" />
-            </div>
-        </div>
-        <div class="clearfix">
-            <label>Meeting Time</label>
-            <div class="input">
-                <div class="inline-inputs">
-                    <input class="span2 uneditable-input" readonly="readonly" type="text" value="@Model.StartDateTime.ToString("d")"/>
-                    from
-                    <input class="span2 uneditable-input" readonly="readonly" type="text" value="@Model.StartDateTime.ToString("t")"/>
-                    to
-                    <input class="span2 uneditable-input" readonly="readonly" type="text" value="@Model.EndDateTime.ToString("t")"/>
-                    <span class="help-block">All times are shown as Arizona Standard Time.</span>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix">
-            <label>Location</label>
-            <div class="input">
-                <div class="inline-inputs">
-                    <input class="span7 uneditable-input" readonly="readonly" type="text" value="@Model.Location"/>
-                    <span class="help-block"><a href="http://www.bing.com/maps/?where1=@Model.Location.Substring(@Model.Location.IndexOf(", ")+2)" target="_blank">View Bing Map</a>.</span>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix">
-            <label>Speaker</label>
-            <div class="input">
-                <div class="inline-inputs">
-                    <input class="span6 uneditable-input" readonly="readonly" type="text" value="@Model.SpeakerName"/>
-                    <span class="help-block"><a href="@Model.SpeakerBioLink" target="_blank">More information on the speaker</a>.</span>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix">
-            <label>Abstract/Notes</label>
-            <div class="input">
-                <textarea class="span10" readonly="readonly" cols="5" rows="15">@Model.Notes</textarea>
-            </div>
-        </div>
+	<fieldset>
+		<legend>Details for @Model.Title on @Model.StartDateTime.ToShortDateString()</legend>
+		<div class="clearfix">
+			<label>RSVP</label>
+			<div class="input">
+				Please RSVP for meetings by choosing the matching FREE ticket for the month at our Eventday site.<br/>
+				<a target="_blank" href="http://nwvdnugmonthly.eventday.com/">NWVDNUG Monthly Meetings</a>
+			</div>
+		</div>
+		<div class="clearfix">
+			<label>Title</label>
+			<div class="input">
+				<input id="TitleInput" class="span6 uneditable-input" readonly="readonly" type="text" value="@Model.Title" />
+			</div>
+		</div>
+		<div class="clearfix">
+			<label>Meeting Time</label>
+			<div class="input">
+				<div class="inline-inputs">
+					<input class="span2 uneditable-input" readonly="readonly" type="text" value="@Model.StartDateTime.ToString("d")"/>
+					from
+					<input class="span2 uneditable-input" readonly="readonly" type="text" value="@Model.StartDateTime.ToString("t")"/>
+					to
+					<input class="span2 uneditable-input" readonly="readonly" type="text" value="@Model.EndDateTime.ToString("t")"/>
+					<span class="help-block">All times are shown as Arizona Standard Time.</span>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">
+			<label>Location</label>
+			<div class="input">
+				<div class="inline-inputs">
+					<input class="span7 uneditable-input" readonly="readonly" type="text" value="@Model.Location"/>
+					<span class="help-block"><a href="http://www.bing.com/maps/?where1=@Model.Location.Substring(@Model.Location.IndexOf(", ")+2)" target="_blank">View Bing Map</a>.</span>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">
+			<label>Speaker</label>
+			<div class="input">
+				<div class="inline-inputs">
+					<input class="span6 uneditable-input" readonly="readonly" type="text" value="@Model.SpeakerName"/>
+					<span class="help-block"><a href="@Model.SpeakerBioLink" target="_blank">More information on the speaker</a>.</span>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">
+			<label>Abstract/Notes</label>
+			<div class="input">
+				<textarea class="span10" readonly="readonly" cols="5" rows="15">@Model.Notes</textarea>
+			</div>
+		</div>
 
-        <div class="actions">
-            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn large" })
-        </div>
-    </fieldset>
+		<div class="actions">
+			@Html.ActionLink("Back to List", "Index", null, new { @class = "btn large" })
+		</div>
+	</fieldset>
 </form>
 
 

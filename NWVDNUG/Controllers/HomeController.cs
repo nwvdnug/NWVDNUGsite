@@ -49,5 +49,10 @@ namespace NWVDNUG.Controllers
         {
             return View();
         }
+
+        public ViewResult Privacy()
+        {
+            return View();
+        }
     }
 }

@@ -1,32 +1,33 @@
 ﻿@model NWVDNUG.ViewModels.HomePageViewModel
-           
+		   
 @{
-    ViewBag.Title = "Home Page";
-    ViewBag.NavActive = "Home";
+	ViewBag.Title = "Home Page";
+	ViewBag.NavActive = "Home";
 }
 
 <div class="hero-unit">
-    <h2>Welcome to the North West Valley .Net User Group!</h2>
-    <p>This user group is a environment for .NET developers and IT professionals building real-world solutions using the Microsoft.NET platform.</p>
-    <p>We will provide the opportunity for members to share knowledge and have technical discussions with other local community members and industry recognized leaders.</p>
-    <p></p>
+	<h2>Welcome to the North West Valley .Net User Group!</h2>
+	<p>This user group is a environment for .NET developers and IT professionals building real-world solutions using the Microsoft.NET platform.</p>
+	<p>We will provide the opportunity for members to share knowledge and have technical discussions with other local community members and industry recognized leaders.</p>
+	<p></p>
 </div>      
 <div class="row"> 
-        <div class="span4"> 
-          <h2>Next Meeting</h2> 
-          <p>Our next meeting is @string.Format("{0} by {1}", Model.NextMeetingInfo.Title, Model.NextMeetingInfo.SpeakerName). It will be on @Model.NextMeetingInfo.StartDateTime.ToString("f").</p> 
-          <p><a class="btn" href="@Url.Action("Next", "Meetings")">View details &raquo;</a></p> 
-        </div> 
-        <div class="span5"> 
-          <h2>Upcoming Meetings</h2> 
-          <p>To see a list of upcoming meeting and events vist here.</p> 
-          <p><a class="btn" href="@Url.Action("Index","Meetings")">Upcoming Meetings &raquo;</a></p> 
-       </div> 
-        <div class="span4">
-          <h2>Network</h2> 
-          <p>To stay up to date on events and communicate with fellow members</p> 
-          <p><a class="btn" href="@Url.Action("Network")">Network &raquo;</a></p> 
-        </div> 
+		<div class="span4"> 
+		  <h2>Next Meeting</h2> 
+		  <p>Our next meeting is @string.Format("{0} by {1}", Model.NextMeetingInfo.Title, Model.NextMeetingInfo.SpeakerName). It will be on @Model.NextMeetingInfo.StartDateTime.ToString("f").</p> 
+		  <p><a class="btn" href="@Url.Action("Next", "Meetings")">View details &raquo;</a></p> 
+		</div> 
+		<div class="span5"> 
+		  <h2>Upcoming Meetings</h2> 
+		  <p>To see a list of upcoming meeting and events vist here.</p> 
+		  <p><a class="btn" href="@Url.Action("Index","Meetings")">Upcoming Meetings &raquo;</a></p> 
+	   </div> 
+	<div class="span4">
+		<h2>Network</h2> 
+		<p>To stay up to date on events and communicate with fellow members</p>
+		<p><a class="btn" href="@Url.Action("Network")">Network &raquo;</a></p> 
+		<p><a href="https://plus.google.com/104021281142172736622" rel="publisher">Google+</a></p>
+	</div> 
 </div>
 
 @section Head {

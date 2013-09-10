@@ -111,6 +111,7 @@
     <Content Include="Content\images\sponsors\C1Logo_static_125x125px.jpg" />
     <Content Include="Content\images\sponsors\discountasp_static_120x60px.gif" />
     <Content Include="Content\images\sponsors\logo_resharper189x38.gif" />
+    <Content Include="Content\images\sponsors\neudesic_logo.gif" />
     <Content Include="Content\images\sponsors\pluralsight-fullcolor-175x39-v1.png" />
     <Content Include="Content\images\sponsors\RGLogo_SimpleTools_OnWhite_RGB.jpg" />
     <Content Include="Content\images\sponsors\Tech_Finders_Logo.jpg" />

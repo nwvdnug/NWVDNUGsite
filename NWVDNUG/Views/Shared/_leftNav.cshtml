@@ -5,7 +5,7 @@
     <li @if (ViewBag.NavActive == "MeetingNext")
         {<text>class="active"</text>}>@Html.ActionLink("Next Meeting", "Next", "Meetings")</li>
     <li @if (ViewBag.NavActive == "MeetingUpcoming")
-        {<text>class="active"</text>}>@Html.ActionLink("Upcoming Meetings", "Index", "Meetings")</li>
+        {<text>class="active"</text>}>@Html.ActionLink("Upcoming Meetings", "Upcoming", "Meetings")</li>
     <li @if (ViewBag.NavActive == "Sponsors")
         {<text>class="active"</text>}>@Html.ActionLink("Sponsors", "Sponsors", "Home")</li>
     <li @if (ViewBag.NavActive == "Network")
